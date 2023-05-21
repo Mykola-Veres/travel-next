@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
-import Slider from "./Slider";
+
 import Plane from "../../assets/plane.svg";
+import Slider from "./Slider";
 
 export default function Placces() {
   const { asPath, pathname } = useRouter();

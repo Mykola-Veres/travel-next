@@ -1,4 +1,5 @@
 import { FC, PropsWithChildren } from "react";
+
 import Header from "../Header/Header";
 import Head from "next/head";
 import Footer from "../Footer/Footer";
@@ -12,9 +13,9 @@ const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
         <meta name="og:title" content="Travel"></meta>
         <meta name="og:description" content="Travel around the world"></meta>
       </Head>
-      <Header></Header>
+      <Header />
       {children}
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };

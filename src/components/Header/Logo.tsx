@@ -1,5 +1,5 @@
-import NextLink from "next/link";
 import { FC } from "react";
+import NextLink from "next/link";
 
 import Logo from "../../assets/Logo.svg";
 

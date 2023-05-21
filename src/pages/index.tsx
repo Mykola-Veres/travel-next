@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <Layout>
       <main className={`${volkhov.className} px-6`}>
-        <HomePage></HomePage>
+        <HomePage />
       </main>
     </Layout>
   );

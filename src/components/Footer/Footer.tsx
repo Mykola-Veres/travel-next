@@ -1,4 +1,4 @@
-import HeaderLinkPages from "../Header/LinkPages";
+import HeaderLinkPages from "../LinkPages/LinkPages";
 import CompanyLogo from "../Header/Logo";
 
 function Footer() {

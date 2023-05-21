@@ -1,7 +1,8 @@
 import Image from "next/image";
-import NextLink from "next/link";
+
 import hero from "../../assets/Image.jpg";
 import decorate from "../../../public/Decore.jpg";
+import Button from "../Button/Button";
 
 export default function Hero() {
   return (
@@ -23,12 +24,7 @@ export default function Hero() {
             west hard for the.
           </p>
           <div className="text-center mt-10 sm:mb-5">
-            <NextLink
-              href="/contacts"
-              className="rounded-lg border-transparent px-5 py-4 transition-colors bg-yellow-500 text-white hover:border-gray-300 hover:bg-green-500"
-            >
-              Find out more
-            </NextLink>
+            <Button>Find out more</Button>
           </div>
         </div>
         <div className="relative bottom-0 left-0 object-cover flex items-center justify-center bg-gradient-to-t from-white via-white">

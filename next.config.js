@@ -32,4 +32,20 @@ module.exports = {
     return config;
   },
   reactStrictMode: true,
+  // images: {
+  //   domains: [
+  //     "images.pexels.com", // Добавьте домен
+  //   ],
+  // },
+
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: "https",
+  //       hostname: "images.pexels.com",
+  //       port: "",
+  //       pathname: "/account123/**",
+  //     },
+  //   ],
+  // },
 };

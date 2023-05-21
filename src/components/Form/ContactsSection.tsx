@@ -1,5 +1,5 @@
-import ContactForm from "./ContactForm";
 import Plane from "../../assets/plane.svg";
+import ContactForm from "./ContactForm";
 
 export default function ContactsSection() {
   return (

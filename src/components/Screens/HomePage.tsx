@@ -5,8 +5,8 @@ import ScrollToTop from "../ScrollToTop/ScrollToTop";
 export default function HomePage() {
   return (
     <>
-      <Hero></Hero>
-      <Placces></Placces>
+      <Hero />
+      <Placces />
       <ScrollToTop />
     </>
   );

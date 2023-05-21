@@ -12,7 +12,7 @@ export default function Contacts() {
   return (
     <Layout>
       <main className={`${volkhov.className}`}>
-        <ContactsPage></ContactsPage>
+        <ContactsPage />
       </main>
     </Layout>
   );

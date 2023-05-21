@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-import HeaderLinkPages from "./LinkPages";
+import HeaderLinkPages from "../LinkPages/LinkPages";
 import CompanyLogo from "./Logo";
 
 const Header: FC = () => {
