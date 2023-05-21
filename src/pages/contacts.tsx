@@ -1,18 +1,18 @@
 import { Volkhov } from "next/font/google";
 
 import Layout from "@/components/Layout/layout";
-import HomePage from "@/components/Screens/HomePage";
+import ContactsPage from "@/components/Screens/ContactsPage";
 
 const volkhov = Volkhov({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
 
-export default function Home() {
+export default function Contacts() {
   return (
     <Layout>
-      <main className={`${volkhov.className} px-6`}>
-        <HomePage></HomePage>
+      <main className={`${volkhov.className}`}>
+        <ContactsPage></ContactsPage>
       </main>
     </Layout>
   );

@@ -4,16 +4,8 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: #f8fafc;
   --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 body {
@@ -25,3 +17,47 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+*,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  img {
+  display: block;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    .active {
+      border-bottom: 5px solid #13034a;
+      background-color: antiquewhite;
+      border-radius: 16px;
+      padding-left: 2px;
+      padding-right: 2px;
+  }
