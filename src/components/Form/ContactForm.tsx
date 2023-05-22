@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
+import CustomInput from "./Input";
+
 const schema = yup
   .object({
     firstName: yup.string().min(2).max(20).required(),
@@ -39,45 +41,29 @@ export default function ContactForm() {
           about Jadoo
         </legend>
 
-        <div className="mb-4">
-          <label htmlFor="firstName" className="block mb-2">
-            First Name
-          </label>
-          <input
-            {...register("firstName", { pattern: /^[A-Za-z]+$/i })}
-            className="border border-gray-300 rounded-md px-4 py-2 w-full"
-            placeholder="Mykola"
-          />
-          <p className="text-red-500 mt-1">{errors.firstName?.message} </p>
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="email" className="block mb-2">
-            Email
-          </label>
-          <input
-            {...register("email")}
-            className="border border-gray-300 rounded-md px-4 py-2 w-full"
-            placeholder="email@gmail.com"
-          />
-          <p className="text-red-500 mt-1">{errors.email?.message}</p>
-        </div>
-
-        <div>
-          <label htmlFor="phone" className="block mb-2">
-            Phone
-          </label>
-          <input
-            {...register("phone")}
-            className="border border-gray-300 rounded-md px-4 py-2 w-full"
-            placeholder="80677785095"
-          />
-          <p className="text-red-500 mt-1">
-            {errors.checkbox?.message &&
-              "Phone number must be more than 7 digits and less than 20 digits!"}
-          </p>
-        </div>
-
+        <CustomInput
+          label="First Name"
+          name="firstName"
+          register={register}
+          errors={errors}
+          placeholder="Mykola"
+          pattern={/^[A-Za-z]+$/i}
+        />
+        <CustomInput
+          label="Email"
+          name="email"
+          register={register}
+          errors={errors}
+          placeholder="email@gmail.com"
+        />
+        <CustomInput
+          label="Phone"
+          name="phone"
+          register={register}
+          errors={errors}
+          placeholder="80677785095"
+          errorMessage="Phone number must be more than 7 digits and less than 20 digits!"
+        />
         <div className="mb-4">
           {" "}
           <select {...register("gender")}>
