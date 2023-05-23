@@ -28,7 +28,7 @@ export default function Placces() {
         <div className="relative bottom-0 left-0 flex h-48 items-center justify-center bg-gradient-to-t from-white via-white">
           <ul>
             <li className="relative h-36 w-48">
-              <Plane />
+              <Plane alt="Plane" />
             </li>
           </ul>
         </div>

@@ -44,22 +44,21 @@ export default function ContactForm() {
         <CustomInput
           label="First Name"
           name="firstName"
-          register={register}
+          register={register("firstName", { pattern: /^[A-Za-z]+$/i || null })}
           errors={errors}
           placeholder="Mykola"
-          pattern={/^[A-Za-z]+$/i}
         />
         <CustomInput
           label="Email"
           name="email"
-          register={register}
+          register={register("email")}
           errors={errors}
           placeholder="email@gmail.com"
         />
         <CustomInput
           label="Phone"
           name="phone"
-          register={register}
+          register={register("phone")}
           errors={errors}
           placeholder="80677785095"
           errorMessage="Phone number must be more than 7 digits and less than 20 digits!"

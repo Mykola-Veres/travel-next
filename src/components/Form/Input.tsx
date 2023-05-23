@@ -1,17 +1,15 @@
 import {
   FieldError,
   FieldValues,
-  RegisterOptions,
-  UseFormRegister,
+  UseFormRegisterReturn,
 } from "react-hook-form";
 
 type CustomInputProps = {
   label: string;
   name: keyof FieldValues;
-  register?: any;
+  register?: UseFormRegisterReturn;
   errors?: any;
   placeholder?: string;
-  pattern?: RegisterOptions["pattern"];
   errorMessage?: string;
 };
 
@@ -21,7 +19,6 @@ const CustomInput: React.FC<CustomInputProps> = ({
   register,
   errors,
   placeholder,
-  pattern,
   errorMessage,
 }) => {
   return (
@@ -30,7 +27,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         {label}
       </label>
       <input
-        {...register(name, { pattern: pattern || null })}
+        {...register}
         className="border border-gray-300 rounded-md px-4 py-2 w-full"
         placeholder={placeholder}
       />
