@@ -1,54 +1,52 @@
 import { FC, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-import HeaderLinkPages from "../LinkPages/LinkPages";
-import CompanyLogo from "./Logo";
+import CompanyLogo from "../Logo/Logo";
 
 const Header: FC = () => {
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState("section1");
 
   const handleSetActive = (to: string) => {
     setActiveLink(to);
   };
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center bg-blue-100 opacity-90 font-bold text-2xl px-2">
-        <CompanyLogo />
-        <nav className="flex">
-          <div className="flex flex-col items-center justify-center text-base md:flex-row">
+    <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center bg-blue-100 opacity-90 font-bold text-2xl px-2">
+      <CompanyLogo />
+      <nav className="flex">
+        <ul className="flex flex-col items-center w-36 md:w-80 justify-center text-base md:flex-row">
+          <li className="sm:mb-2 ">
             <ScrollLink
               activeClass="active"
               to="section1"
               spy={true}
               smooth={true}
-              offset={-10}
-              duration={500}
+              duration={400}
               onSetActive={handleSetActive}
               className={`${
                 activeLink === "section1" ? "active" : ""
-              } py-4 mr-4 cursor-pointer hover:shadow-xl md:mr-6 md:py-6`}
+              } py-1 px-2 cursor-pointer hover:shadow-xl md:mr-6 md:py-6 transition duration-0 hover:duration-300 rounded-lg`}
             >
               First Section
             </ScrollLink>
+          </li>
+          <li className="">
             <ScrollLink
               activeClass="active"
               to="section2"
               spy={true}
               smooth={true}
-              offset={-100}
-              duration={500}
+              duration={400}
               onSetActive={handleSetActive}
               className={`${
                 activeLink === "section2" ? "active" : ""
-              } py-4 mr-4 cursor-pointer hover:shadow-xl md:mr-6 md:py-6`}
+              } py-1 px-2 cursor-pointer hover:shadow-xl md:py-6 transition duration-0 hover:duration-300 rounded-lg`}
             >
               Second Section
             </ScrollLink>
-          </div>
-          <HeaderLinkPages />
-        </nav>
-      </header>
-    </>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

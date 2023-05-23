@@ -1,7 +1,11 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, ReactNode } from "react";
 import NextLink from "next/link";
 
-const Button: FC<PropsWithChildren<unknown>> = ({ children }) => {
+interface ButtonProps {
+  children: ReactNode;
+}
+
+const Button: FC<ButtonProps> = ({ children }) => {
   return (
     <div className="text-center mt-10 sm:mb-5">
       <NextLink

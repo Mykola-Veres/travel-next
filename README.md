@@ -1,38 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Travel App
 
-## Getting Started
+This is a travel application that allows users to explore various destinations and contact the travel agency for inquiries. The application consists of two main pages: the home page and the contact page.
 
-First, run the development server:
+## Home Page
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The home page showcases stunning images of different travel destinations, creating an immersive experience for users. It features a slider that displays multiple travel destinations, allowing users to browse through them easily. Additionally, the page provides smooth scrolling functionality, enabling users to navigate effortlessly between sections.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contact Page
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The contact page provides a convenient way for users to get in touch with the travel agency. It includes a contact form where users can enter their name, phone number, and email address. By submitting the form, users can send their inquiries directly to the agency, making it easier to request information or make travel arrangements.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Enjoy exploring the world with our travel app!
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Додаток для подорожей
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Це додаток для подорожей, який дозволяє користувачам відкривати різні напрямки та зв'язуватися з туристичною агенцією для отримання інформації. Додаток складається з двох основних сторін: головної сторінки та сторінки з контактами.
 
-## Learn More
+## Головна сторінка
 
-To learn more about Next.js, take a look at the following resources:
+На головній сторінці показуються захоплюючі зображення різних туристичних напрямків, створюючи незабутню атмосферу для користувачів. Тут є слайдер, що відображає кілька подорожей, щоб користувачі могли легко їх переглядати. Крім того, сторінка надає функціонал плавної прокрутки, що дозволяє користувачам зручно переміщатися між секціями.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Сторінка з контактами
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Сторінка з контактами надає зручний спосіб для користувачів зв'язатися з туристичною агенцією. Тут розміщена контактна форма, де користувачі можуть ввести своє ім'я, номер телефону та адресу електронної пошти. Після надсилання форми, користувачі можуть відправити свої запити безпосередньо агенції, що полегшує отримання інформації або здійснення подорожей.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Насолоджуйтеся дослідженням світу з нашим додатком для подорожей!

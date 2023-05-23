@@ -2,20 +2,12 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-import CustomInput from "./Input";
+import CustomInput from "../Input/Input";
+import { schema } from "./schema";
 
-const schema = yup
-  .object({
-    firstName: yup.string().min(2).max(20).required(),
-    email: yup.string().email().required(),
-    phone: yup.number().required(),
-    gender: yup.string().oneOf(["male", "female", "other"]).required(),
-    checkbox: yup.boolean().oneOf([true], "Checkbox is required").required(),
-  })
-  .required();
 type FormData = yup.InferType<typeof schema>;
 
-export default function ContactForm() {
+function ContactForm() {
   const {
     register,
     handleSubmit,
@@ -33,7 +25,7 @@ export default function ContactForm() {
     <form
       id="section2"
       onSubmit={handleSubmit(onSubmit)}
-      className="max-w-xs md:max-w-md mx-auto px-2"
+      className="max-w-[300px] md:max-w-md mx-auto px-2 pt-32"
     >
       <fieldset>
         <legend className="text-center mb-5 sm:text-2xl font-bold text-rose-500">
@@ -44,27 +36,32 @@ export default function ContactForm() {
         <CustomInput
           label="First Name"
           name="firstName"
-          register={register("firstName", { pattern: /^[A-Za-z]+$/i || null })}
-          errors={errors}
+          register={register("firstName")}
+          errors={
+            (errors["firstName"]?.message && "") || errors["firstName"]?.message
+          }
           placeholder="Mykola"
         />
         <CustomInput
           label="Email"
           name="email"
           register={register("email")}
-          errors={errors}
+          errors={(errors["email"]?.message && "") || errors["email"]?.message}
           placeholder="email@gmail.com"
         />
         <CustomInput
           label="Phone"
           name="phone"
           register={register("phone")}
-          errors={errors}
+          errors={
+            (errors["phone"]?.message &&
+              "Phone number must be more 6 and less 20 digits!") ||
+            errors["phone"]?.message
+          }
           placeholder="80677785095"
-          errorMessage="Phone number must be more than 7 digits and less than 20 digits!"
         />
+
         <div className="mb-4">
-          {" "}
           <select {...register("gender")}>
             <option value="female">female</option>
             <option value="male">male</option>
@@ -72,7 +69,7 @@ export default function ContactForm() {
           </select>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-2">
           <label className="flex items-center">
             <input
               type="checkbox"
@@ -81,7 +78,7 @@ export default function ContactForm() {
             />
             I agree to the terms and conditions
           </label>
-          <p className="text-red-500 mt-1 ">{errors.checkbox?.message}</p>
+          <p className="text-red-500 mt-1 h-6">{errors.checkbox?.message}</p>
         </div>
 
         <input
@@ -92,3 +89,5 @@ export default function ContactForm() {
     </form>
   );
 }
+
+export default ContactForm;

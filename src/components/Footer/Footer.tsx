@@ -1,9 +1,9 @@
 import HeaderLinkPages from "../LinkPages/LinkPages";
-import CompanyLogo from "../Header/Logo";
+import CompanyLogo from "../Logo/Logo";
 
 function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center bg-blue-300 text-xs px-2">
+    <footer className="mx-auto flex flex-col items-center justify-center bg-blue-300 text-xs">
       <div className="flex">
         <div className="flex flex-col">
           <CompanyLogo />

@@ -1,11 +1,11 @@
-import Plane from "../../assets/plane.svg";
-import ContactForm from "./ContactForm";
+import Plane from "../assets/plane.svg";
+import ContactForm from "../components/Form/ContactForm";
 
-export default function ContactsSection() {
+function ContactsSection() {
   return (
-    <section className={`py-40 px-2`}>
+    <section className={`px-2 pb-40`}>
       <div className="flex flex-col items-center justify-between">
-        <div id="section1" className="">
+        <div id="section1" className="pt-40">
           <p className="lg:text-4xl font-bold leading-[1.15] text-rose-400 sm:text-3xl text-center">
             Easy and Fast
           </p>
@@ -17,7 +17,7 @@ export default function ContactsSection() {
             offers about Jadoo
           </p>
           <div className="flex justify-center mb-5">
-            <Plane alt="Plane" />
+            <Plane aria-label="Plane" />
           </div>
         </div>
         <ContactForm />
@@ -25,3 +25,5 @@ export default function ContactsSection() {
     </section>
   );
 }
+
+export default ContactsSection;

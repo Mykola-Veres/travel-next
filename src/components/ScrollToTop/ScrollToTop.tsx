@@ -1,7 +1,7 @@
 import { animateScroll as scroll } from "react-scroll";
 import Scroll from "../../assets/scroll.svg";
 
-export default function ScrollToTop() {
+function ScrollToTop() {
   function scrollToTop() {
     scroll.scrollToTop();
   }
@@ -15,3 +15,5 @@ export default function ScrollToTop() {
     </a>
   );
 }
+
+export default ScrollToTop;

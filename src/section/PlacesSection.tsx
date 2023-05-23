@@ -1,17 +1,11 @@
-import { useRouter } from "next/router";
+import Plane from "../assets/plane.svg";
+import Slider from "../components/Slider/Slider";
 
-import Plane from "../../assets/plane.svg";
-import Slider from "./Slider";
-
-export default function Placces() {
-  const { asPath, pathname } = useRouter();
-  console.log("asPath", asPath);
-  console.log("pathname", pathname);
-
+function Placces() {
   return (
     <section
       id="section2"
-      className={`flex flex-col items-center justify-center pb-40`}
+      className={`flex flex-col items-center justify-center py-32`}
     >
       <div>
         <div>
@@ -28,7 +22,7 @@ export default function Placces() {
         <div className="relative bottom-0 left-0 flex h-48 items-center justify-center bg-gradient-to-t from-white via-white">
           <ul>
             <li className="relative h-36 w-48">
-              <Plane alt="Plane" />
+              <Plane aria-label="Plane" />
             </li>
           </ul>
         </div>
@@ -39,3 +33,5 @@ export default function Placces() {
     </section>
   );
 }
+
+export default Placces;

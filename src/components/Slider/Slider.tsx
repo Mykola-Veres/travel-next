@@ -4,7 +4,6 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 import Image from "next/image";
-import roma from "../../assets/Roma.jpg";
 import europe from "../../assets/Europe.jpg";
 import london from "../../assets/Lomdon.jpg";
 import greece from "../../assets/Greece.jpg";
@@ -38,7 +37,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src={roma}
+            src="/Roma.jpg"
             alt="Roma"
             width={310}
             height={450}

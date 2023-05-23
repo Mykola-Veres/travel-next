@@ -1,14 +1,14 @@
 import Image from "next/image";
 
-import hero from "../../assets/Image.jpg";
-import decorate from "../../../public/Decore.jpg";
-import Button from "../Button/Button";
+import hero from "../assets/Image.jpg";
+import decorate from "../../public/Decore.jpg";
+import Button from "../components/Button/Button";
 
-export default function Hero() {
+function Hero() {
   return (
     <section
       id="section1"
-      className={`flex flex-col items-center justify-between py-40`}
+      className={`flex flex-col items-center justify-between pt-40`}
     >
       <div className="relative overflow-hidden w-full h-full bg-cover flex sm:flex-col md:flex-row">
         <div className="md:w-3/4">
@@ -34,7 +34,7 @@ export default function Hero() {
             className="w-full object-cover "
             width={760}
             height={784}
-            priority
+            loading="lazy"
           />
         </div>
         <Image
@@ -49,3 +49,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default Hero;
