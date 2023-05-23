@@ -17,7 +17,7 @@ export default function ContactsSection() {
             offers about Jadoo
           </p>
           <div className="flex justify-center mb-5">
-            <Plane />
+            <Plane alt="Plane" />
           </div>
         </div>
         <ContactForm />
