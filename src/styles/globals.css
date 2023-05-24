@@ -32,11 +32,6 @@ main {
   margin-right: auto;
 }
 
-/* *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  } */
   img {
   display: block;
   }

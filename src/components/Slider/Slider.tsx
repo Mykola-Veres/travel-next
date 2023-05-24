@@ -2,11 +2,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-
 import Image from "next/image";
-import europe from "../../assets/Europe.jpg";
-import london from "../../assets/Lomdon.jpg";
-import greece from "../../assets/Greece.jpg";
+
+const images = [
+  { src: "/train.jpg", name: "train" },
+  { src: "/borabora.jpg", name: "borabora" },
+  { src: "/houses.jpg", name: "houses" },
+  { src: "/architecture.jpg", name: "architecture" },
+];
 
 const Slider = () => {
   return (
@@ -17,42 +20,21 @@ const Slider = () => {
         slidesPerView={1}
         modules={[Navigation]}
       >
-        <SwiperSlide>
-          <Image
-            src={europe}
-            alt="Europe"
-            width={310}
-            height={450}
-            className="object-cover w-full"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={london}
-            alt="London"
-            width={310}
-            height={450}
-            className="object-cover w-full"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/Roma.jpg"
-            alt="Roma"
-            width={310}
-            height={450}
-            className="object-cover w-full"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={greece}
-            alt="Greece"
-            width={310}
-            height={160}
-            className="object-cover w-full"
-          />
-        </SwiperSlide>
+        <ul>
+          {images.map((path) => (
+            <li key={path.src}>
+              <SwiperSlide className="my-auto rounded-md">
+                <Image
+                  src={path.src}
+                  alt={path.name}
+                  width={300}
+                  height={300}
+                  className="object-cover w-full"
+                />
+              </SwiperSlide>
+            </li>
+          ))}
+        </ul>
       </Swiper>
     </div>
   );

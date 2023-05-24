@@ -1,8 +1,9 @@
 import Image from "next/image";
 
-import hero from "../assets/Image.jpg";
-import decorate from "../../public/Decore.jpg";
-import Button from "../components/Button/Button";
+import hero from "../../../public/Image.jpg";
+import decorate from "../../../public/Decore.jpg";
+
+import Button from "../Button/Button";
 
 function Hero() {
   return (

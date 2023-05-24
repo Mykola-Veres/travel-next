@@ -29,7 +29,7 @@ const Header: FC = () => {
               First Section
             </ScrollLink>
           </li>
-          <li className="">
+          <li>
             <ScrollLink
               activeClass="active"
               to="section2"

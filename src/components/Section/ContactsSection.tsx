@@ -1,5 +1,6 @@
-import Plane from "../assets/plane.svg";
-import ContactForm from "../components/Form/ContactForm";
+import Plane from "../../assets/plane.svg";
+
+import ContactForm from "../Form/ContactForm";
 
 function ContactsSection() {
   return (

@@ -1,4 +1,4 @@
-import ContactsSection from "../section/ContactsSection";
+import ContactsSection from "../components/Section/ContactsSection";
 
 function ContactsPage() {
   return <ContactsSection />;

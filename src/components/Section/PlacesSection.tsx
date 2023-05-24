@@ -1,5 +1,5 @@
-import Plane from "../assets/plane.svg";
-import Slider from "../components/Slider/Slider";
+import Plane from "../../assets/plane.svg";
+import Slider from "../Slider/Slider";
 
 function Placces() {
   return (
