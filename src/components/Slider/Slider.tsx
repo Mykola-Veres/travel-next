@@ -5,10 +5,10 @@ import { Navigation } from "swiper";
 import Image from "next/image";
 
 const images = [
-  { src: "/train.jpg", name: "train" },
-  { src: "/borabora.jpg", name: "borabora" },
-  { src: "/houses.jpg", name: "houses" },
-  { src: "/architecture.jpg", name: "architecture" },
+  { id: "1324", src: "/train.jpg", name: "train" },
+  { id: "2324", src: "/borabora.jpg", name: "borabora" },
+  { id: "3234", src: "/houses.jpg", name: "houses" },
+  { id: "4234", src: "/architecture.jpg", name: "architecture" },
 ];
 
 const Slider = () => {
@@ -22,13 +22,14 @@ const Slider = () => {
       >
         <ul>
           {images.map((path) => (
-            <li key={path.src}>
-              <SwiperSlide className="my-auto rounded-md">
+            <li key={path.id}>
+              <SwiperSlide key={path.id} className="my-auto rounded-md">
                 <Image
                   src={path.src}
                   alt={path.name}
                   width={300}
                   height={300}
+                  loading="lazy"
                   className="object-cover w-full"
                 />
               </SwiperSlide>
