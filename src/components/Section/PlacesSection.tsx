@@ -27,9 +27,7 @@ function Placces() {
           </ul>
         </div>
       </div>
-      <div className=" w-[310px] md:w-[450px] mt-2">
-        <Slider />
-      </div>
+      <Slider />
     </section>
   );
 }

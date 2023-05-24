@@ -19,16 +19,20 @@ const Slider = () => {
         spaceBetween={5}
         slidesPerView={1}
         modules={[Navigation]}
+        className="h-[205px] md:h-[330px] w-[310px] md:w-[500px] flex items-center justify-center"
       >
         <ul>
           {images.map((path) => (
             <li key={path.id}>
-              <SwiperSlide key={path.id} className="my-auto rounded-md">
+              <SwiperSlide
+                key={path.id}
+                className="my-auto rounded-lg overflow-hidden"
+              >
                 <Image
                   src={path.src}
                   alt={path.name}
-                  width={300}
-                  height={300}
+                  width={640}
+                  height={464}
                   loading="lazy"
                   className="object-cover w-full"
                 />

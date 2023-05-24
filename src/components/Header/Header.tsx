@@ -14,7 +14,7 @@ const Header: FC = () => {
       <CompanyLogo />
       <nav className="flex">
         <ul className="flex flex-col items-center w-36 md:w-80 justify-center text-base md:flex-row">
-          <li className="sm:mb-2 ">
+          <li className="mb-2 md:mb-0">
             <ScrollLink
               activeClass="active"
               to="section1"
@@ -26,7 +26,7 @@ const Header: FC = () => {
                 activeLink === "section1" ? "active" : ""
               } py-1 px-2 cursor-pointer hover:shadow-xl md:mr-6 md:py-6 transition duration-0 hover:duration-300 rounded-lg`}
             >
-              First Section
+              Main info
             </ScrollLink>
           </li>
           <li>
@@ -41,7 +41,7 @@ const Header: FC = () => {
                 activeLink === "section2" ? "active" : ""
               } py-1 px-2 cursor-pointer hover:shadow-xl md:py-6 transition duration-0 hover:duration-300 rounded-lg`}
             >
-              Second Section
+              About trips
             </ScrollLink>
           </li>
         </ul>

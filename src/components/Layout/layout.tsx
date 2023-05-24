@@ -1,10 +1,14 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, ReactNode } from "react";
 import Head from "next/head";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Head>

@@ -70,3 +70,10 @@ a {
       padding-left: 8px;
       padding-right: 8px;
   }
+
+  .swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #ffffff;
+  opacity: 0.5;
+  border-radius: 50%;
+}

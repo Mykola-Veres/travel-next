@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import toast from "react-hot-toast";
 
 import CustomInput from "../Input/Input";
 
@@ -18,7 +19,12 @@ function ContactForm() {
     resolver: yupResolver(schema),
   });
   const onSubmit = (data: FormData) => {
-    console.log(data);
+    toast.success(
+      `Successfully! ${data.firstName} ${data.email} ${data.phone}`,
+      {
+        duration: 3000,
+      }
+    );
     reset();
   };
 
@@ -56,7 +62,7 @@ function ContactForm() {
           register={register("phone")}
           errors={
             (errors["phone"]?.message &&
-              "Phone number must be more 6 and less 20 digits!") ||
+              "Phone must be more 6 and less 20 digits!") ||
             errors["phone"]?.message
           }
           placeholder="80677785095"
@@ -70,7 +76,7 @@ function ContactForm() {
           </select>
         </div>
 
-        <div className="mb-2">
+        <div className="relative mb-6">
           <label className="flex items-center">
             <input
               type="checkbox"
@@ -79,7 +85,9 @@ function ContactForm() {
             />
             I agree to the terms and conditions
           </label>
-          <p className="text-red-500 mt-1 h-6">{errors.checkbox?.message}</p>
+          <p className="absolute text-sm text-red-500">
+            {errors.checkbox?.message}
+          </p>
         </div>
 
         <input

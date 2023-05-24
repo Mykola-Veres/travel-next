@@ -8,7 +8,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
   placeholder,
 }) => {
   return (
-    <div className="mb-2 px-2">
+    <div className="relative mb-6 px-2">
       <label htmlFor={name} className="block mb-2">
         {label}
       </label>
@@ -17,7 +17,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         className="border border-gray-300 rounded-md px-2 py-2 w-full"
         placeholder={placeholder}
       />
-      <p className="text-red-500 mt-1 h-10 md:h-6">{errors}</p>
+      <p className="absolute text-red-500 text-sm">{errors}</p>
     </div>
   );
 };
