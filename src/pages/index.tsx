@@ -1,6 +1,6 @@
 import { Volkhov } from "next/font/google";
 
-import Layout from "@/components/Layout/layout";
+// import Layout from "@/components/Layout/Layout";
 import HomePage from "@/screens/HomePage";
 
 const volkhov = Volkhov({
@@ -10,11 +10,9 @@ const volkhov = Volkhov({
 
 function Home() {
   return (
-    <Layout>
-      <main className={`${volkhov.className} px-3`}>
-        <HomePage />
-      </main>
-    </Layout>
+    <main className={`${volkhov.className} px-3`}>
+      <HomePage />
+    </main>
   );
 }
 

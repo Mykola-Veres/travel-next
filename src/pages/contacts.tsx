@@ -1,7 +1,7 @@
 import { Volkhov } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 
-import Layout from "@/components/Layout/layout";
+// import Layout from "@/components/Layout/Layout";
 import ContactsPage from "@/screens/ContactsPage";
 
 const volkhov = Volkhov({
@@ -11,12 +11,10 @@ const volkhov = Volkhov({
 
 function Contacts() {
   return (
-    <Layout>
-      <main className={`${volkhov.className}`}>
-        <Toaster position="top-center" reverseOrder={false} />
-        <ContactsPage />
-      </main>
-    </Layout>
+    <main className={`${volkhov.className}`}>
+      <Toaster position="top-center" reverseOrder={false} />
+      <ContactsPage />
+    </main>
   );
 }
 
