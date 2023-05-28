@@ -92,6 +92,7 @@ function ContactForm() {
 
         <input
           type="submit"
+          value="Send information"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded cursor-pointer"
         />
       </fieldset>
